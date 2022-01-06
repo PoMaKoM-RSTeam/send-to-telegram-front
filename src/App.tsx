@@ -1,14 +1,10 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          First Page
-        </p>  
-      </header>
+    <div className="wrapper">
+      <h1>Telegram Bot</h1>
     </div>
   );
 }
