@@ -138,7 +138,7 @@ Authors
 * [PoMaKoM  [Team Lead & Mentor]](https://github.com/PoMaKoM)
 * [alexxg0152  [Frontend developer (HTML, CSS, TS, JS)]](https://github.com/alexxg0152)
 * [gomunkool  [Frontend developer (HTML, CSS, TS, JS)]](https://github.com/gomunkool)
-* [KaterinaKachann  [Frontend developer (HTML, CSS, TS, JS)]](KaterinaKachann (https://github.com/KaterinaKachann))
+* [KaterinaKachann  [Frontend developer (HTML, CSS, TS, JS)]](https://github.com/KaterinaKachann)
 * [toystix1992  [Backend developer (node.js, js)]](https://github.com/toystix1992)
 * [andrewmakarevich  [Backend developer (node.js, js)]](https://github.com/andrewmakarevich)
 
