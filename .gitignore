@@ -206,41 +206,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-.DS_STORE
-scripts/flow/*/
-.flowconfig
-SpecRunner.html
-benchmarks__
-
-packages/react-devtools-core/dist
-packages/react-devtools-extensions/chrome/build
-packages/react-devtools-extensions/chrome/*.crx
-packages/react-devtools-extensions/chrome/*.pem
-packages/react-devtools-extensions/firefox/build
-packages/react-devtools-extensions/firefox/*.xpi
-packages/react-devtools-extensions/firefox/*.pem
-packages/react-devtools-extensions/shared/build
-packages/react-devtools-extensions/.tempUserDataDir
-packages/react-devtools-inline/dist
-packages/react-devtools-shell/dist
-packages/react-devtools-timeline/dist
-
-__benchmarks__
-build/
-remote-repo/
-coverage/
-.module-cache
-fixtures/dom/public/react-dom.js
-fixtures/dom/public/react.js
-test/the-files-to-test.generated.js
-
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
 /.pnp
 .pnp.js
 
@@ -260,6 +228,10 @@ test/the-files-to-test.generated.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+*.css.map
+*.sass.map
+*.scss.map
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,linux,node,react
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
