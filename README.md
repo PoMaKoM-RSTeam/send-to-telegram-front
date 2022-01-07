@@ -122,4 +122,3 @@ Authors
 * [KaterinaKachann  [Frontend developer (HTML, CSS, TS, JS)]](https://github.com/KaterinaKachann)
 * [andrewmakarevich  [Backend developer (node.js, js)]](https://github.com/andrewmakarevich)
 * [toystix1992  [Backend developer (node.js, js)]](https://github.com/toystix1992)
-
