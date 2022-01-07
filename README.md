@@ -1,12 +1,53 @@
-# Getting Started with Create React App
+Post management system for Telegram messenger
+=================================================
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/PoMaKoM-RSTeam/send-to-telegram-front?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/PoMaKoM-RSTeam/send-to-telegram-front?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/PoMaKoM-RSTeam/send-to-telegram-front?style=for-the-badge)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Table of contents
+-----------------
+
+* [Introduction](#introduction)
+* [How to run application](#how-to-run-application)
+* [Getting help](#getting-help)
+* [Contributing](#contributing)
+* [License](#license)
+* [Authors and history](#authors-and-history)
+
+
+Introduction
+------------
+
+RS Clone is an alternate final stage#2 project in RS.SCHOOL. This is a team mission in the course of which you need to develop a clone of a game or application. The team itself chooses the topic of the project. It can be either an exact or a simplified copy of an existing project, or your own application.
+Our team chose to create a clone of the application for managing posting to channels in a telegram
+
+
+Web application:
+- Maintaining a channel, creating posts, editing posts.
+- Sending postponed posts on a schedule, adding buttons, mailings, pinning, deleting posts and pins (including by timer), etc.
+- Display of suggested posts
+- Ability to manage multiple channels, multiposting (sending messages to multiple channels).
+- Ability to assign roles to users (owner, administrator, editor, author).
+- Chat with feedback through a bot connected to the channel.
+- Create and view a content plan with scheduled posts in a convenient calendar.
+- Display of statistics. Plotting activity graphs.
+- Analysis and provision of recommendations on the time of posting for better coverage of the target audience.
+
+
+[Back-End](https://github.com/PoMaKoM-RSTeam/send-to-telegram-back/blob/develop/README.md)
+
+
+How to run application
+------------
+
+Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +55,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +70,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -39,8 +80,37 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Getting help
+------------
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For help and advice on using this application, you can write to email or find contacts in the developer repositories (listed below).
+
+
+Contributing
+------------
+
+Like any beginner team, we welcome any help and participation in improving the functionality of our application. Feel free for fork aor repository an PR after improve features.
+
+
+License
+-------
+
+Mozilla Public License (MPL) version 2.0
+This projectis distributed under the terms of the [Mozilla Public License (MPL) version 2.0](https://www.mozilla.org/en-US/MPL/2.0/). The MPL fills a useful space in the spectrum of free and open source software licenses, sitting between the Apache license, which does not require modifications to be shared, and the GNU family of licenses, which requires modifications to be shared under a much broader set of circumstances than the MPL.
+
+[Mozilla Public License FAQ](https://www.mozilla.org/en-US/MPL/2.0/FAQ/)
+
+
+Authors and history
+---------------------------
+
+RS Clone is an alternate final stage#2 project in RS.SCHOOL. This is a team mission in the course of which you need to develop a clone of a game or application. The team itself chooses the topic of the project. It can be either an exact or a simplified copy of an existing project, or your own application.
+
+Authors 
+* [PoMaKoM  [Team Lead & Mentor]](https://github.com/PoMaKoM)
+* [alexxg0152  [Frontend developer (HTML, CSS, TS, JS)]](https://github.com/alexxg0152)
+* [gomunkool  [Frontend developer (HTML, CSS, TS, JS)]](https://github.com/gomunkool)
+* [KaterinaKachann  [Frontend developer (HTML, CSS, TS, JS)]](https://github.com/KaterinaKachann)
+* [andrewmakarevich  [Backend developer (node.js, js)]](https://github.com/andrewmakarevich)
+* [toystix1992  [Backend developer (node.js, js)]](https://github.com/toystix1992)
