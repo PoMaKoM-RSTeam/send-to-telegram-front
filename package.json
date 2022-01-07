@@ -11,7 +11,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "prettier": "prettier --write **/*.{ts,js,css,html}"
+        "prettier": "prettier --write **/*.{ts,js,scss,html}"
     },
     "repository": {
         "type": "git",
