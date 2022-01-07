@@ -206,7 +206,32 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+*.css.map
+*.sass.map
+*.scss.map
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,linux,node,react
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
-
