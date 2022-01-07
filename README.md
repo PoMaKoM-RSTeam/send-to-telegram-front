@@ -2,13 +2,6 @@ Post management system for Telegram messenger
 =================================================
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/PoMaKoM-RSTeam/send-to-telegram-front?style=for-the-badge)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/PoMaKoM-RSTeam/send-to-telegram-front?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/PoMaKoM-RSTeam/send-to-telegram-front?style=for-the-badge)
@@ -18,16 +11,11 @@ Table of contents
 -----------------
 
 * [Introduction](#introduction)
-* [Installation](#installation)
+* [How to run application](#how-to-run-application)
 * [Getting help](#getting-help)
 * [Contributing](#contributing)
 * [License](#license)
 * [Authors and history](#authors-and-history)
-<!-- 
-* [Usage](#usage)
-* [Known issues and limitations](#known-issues-and-limitations)
-* [Acknowledgments](#acknowledgments)
--->
 
 
 Introduction
@@ -60,52 +48,45 @@ Further, the Bot's capabilities (some functions of the front will be duplicated,
 - Suggestions for posts (if the user does not have more than one role, he can also create a post, but it will go to moderation and, after approval and editing, can be published). 
 
 
-Installation
+How to run application
 ------------
 
-Application originally designed for use with Node.js and installable via:
+Available Scripts
 
-```typescript
-npm install -g sendToTelegram
-```
+In the project directory, you can run:
 
+#### `npm start`
 
-<!-- Usage
------
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This section explains the principles behind this README file.  If this repository were for actual _software_, this [Usage](#usage) section would explain more about how to run the software, what kind of output or behavior to expect, and so on.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### Basic operation
+#### `npm test`
 
-A suggested approach for using this example README file is as follows:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. Copy the [source file](README.md) for this file to your repository and commit it to your version control system
-2. Delete all the body text but keep the section headings
-3. Write your README content
-4. Commit the new text to your version control system
-5. Update your README file as your software evolves
+#### `npm run build`
 
-The first paragraph in the README file (under the title at the very top) should summarize your software in a concise fashion, preferably using no more than one or two sentences.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-<!-- <p align="center"><img width="80%" src=".graphics/screenshot-top-paragraph.png"></p>
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-The space under the first paragraph and _before_ the [Table of Contents](#table-of-contents) is a good location for optional [badges](https://github.com/badges/shields), which are small visual tokens commonly used on GitHub repositories to communicate project status, dependencies, versions, DOIs, and other information.  The particular badges and colors you use depend on your project and personal tastes.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-The [Introduction](#introduction) and [Usage](#usage) sections are described above.
+#### `npm run eject`
 
-In the [Known issues and limitations](#known-issues) section, summarize any notable issues and/or limitations of your software.  The [Getting help](#getting-help) section should inform readers of how they can contact you, or at least, how they can report problems they may encounter.  The [Contributing](#contributing) section is optional; if your repository is for a project that accepts open-source contributions, then this section is where you can explain to readers how they can go about making contributions.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-The [License](#license) section should state any copyright asserted on the project materials as well as the terms of use of the software, files and other materials found in the project repository.  Finally, the [Authors and history](#authors-and-history) section should inform readers who the authors are; it is also a place where you can acknowledge other contributions to the work and the use of other people's software or tools.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Additional options
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Some projects need to communicate additional information to users and can benefit from additional sections in the README file.  It's difficult to give specific instructions &ndash; a lot depends on your software, your intended audience, etc.  Use your judgment and ask for feedback from users or colleagues to help figure out what else is worth explaining.
-
-
-Known issues and limitations
-----------------------------
-
-In this section, summarize any notable issues and/or limitations of your software.  If none are known yet, this section can be omitted (and don't forget to remove the corresponding entry in the [Table of Contents](#table-of-contents) too); alternatively, you can leave this section in and write something along the lines of "none are known at this time". -->
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 
 Getting help
@@ -142,11 +123,3 @@ Authors
 * [andrewmakarevich  [Backend developer (node.js, js)]](https://github.com/andrewmakarevich)
 * [toystix1992  [Backend developer (node.js, js)]](https://github.com/toystix1992)
 
-
-
-<!-- 
-Acknowledgments
----------------
-
-If your work was funded by any organization or institution, acknowledge their support here.  In addition, if your work relies on other software libraries, or was inspired by looking at other work, it is appropriate to acknowledge this intellectual debt too.  For example, in the process of developing this file, I used not only my own ideas and experiences &ndash; I read many (sometimes contradictory) recommendations for README files and examined real READMEs in actual use, and tried to distill the best ideas into the result you see here.
- -->
