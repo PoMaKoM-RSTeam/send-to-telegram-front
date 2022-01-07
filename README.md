@@ -36,16 +36,8 @@ Web application:
 - Display of statistics. Plotting activity graphs.
 - Analysis and provision of recommendations on the time of posting for better coverage of the target audience.
 
-Node.js server with database. Serves Telegram Bot + Frontend API:
-- Implements REST API for all functions of the Frontend part (see above).
-- Storing in the database all the necessary information (roles, posts, messages).
-Further, the Bot's capabilities (some functions of the front will be duplicated, as intended):
-- Maintaining a channel, creating posts, editing posts.
-- Sending postponed messages on a schedule, adding buttons, mailings, pinning, deleting posts and pins (including by timer), and more.
-- Ability to manage multiple channels, multiposting (sending messages to multiple channels).
-- Ability to assign roles to users (owner, administrator, editor, author).
-- Notification of new messages from users, the ability to reply.
-- Suggestions for posts (if the user does not have more than one role, he can also create a post, but it will go to moderation and, after approval and editing, can be published). 
+
+[Back-End](https://github.com/PoMaKoM-RSTeam/send-to-telegram-back/blob/develop/README.md)
 
 
 How to run application
