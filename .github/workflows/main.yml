@@ -32,12 +32,12 @@ jobs:
       - name: npm ci
         if: steps.cache-node_modules.outputs.cache-hit != 'true'
         run: npm ci
-        
+
       - name: ESLint
-        run: npx eslint ./src 
+        run: npx --no-install eslint .
 
       - name: Prettier
-        run: npx prettier --write ./src 
+        run: npx --no-install prettier --check . 
 
       - name: Build
         run: npm run build
