@@ -1,4 +1,4 @@
-name: send-telegram
+name: reviewdog
 on: [pull_request]
 jobs:
   eslint:
@@ -6,39 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: eslint-github-pr-check
-        uses: ./
+      - uses: actions/setup-node@v2
         with:
-          tool_name: eslint-github-pr-check
-          reporter: github-pr-check
-          level: info
-          eslint_flags: 'testdata/ --ignore-pattern /test-subproject/'
-      - name: eslint-github-check
-        uses: ./
+          node-version: '14'
+      - run: yarn install
+      - uses: reviewdog/action-eslint@v1
         with:
-          tool_name: eslint-github-check
           reporter: github-check
-          level: warning
-          eslint_flags: 'testdata/ --ignore-pattern /test-subproject/'
-      - name: eslint-github-pr-review
-        uses: ./
-        with:
-          tool_name: eslint-github-pr-review
-          reporter: github-pr-review
-          eslint_flags: 'testdata/ --ignore-pattern /test-subproject/'
-      - name: eslint-subproject-github-pr-review
-        uses: ./
-        with:
-          tool_name: eslint-subproject-github-pr-review
-          reporter: github-pr-review
-          workdir: ./test-subproject
-          eslint_flags: 'sub-testdata/'
-      - name: eslint-subproject
-        uses: ./
-        with:
-          tool_name: eslint-subproject
-          workdir: ./test-subproject
-          eslint_flags: 'sub-testdata/'
-          reporter: github-check
-          level: warning
-          filter_mode: file
+          eslint_flags: 'src/'
