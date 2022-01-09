@@ -30,10 +30,10 @@ jobs:
           key: node_modules-${{ matrix.os }}-${{ matrix.node-version }}-${{ hashFiles('package-lock.json') }}
 
       - name: ESLint
-        run: npx eslint ./src .
+        run: npx eslint ./src 
 
       - name: Prettier
-        run: npx prettier --write ./src .
+        run: npx prettier --write ./src 
 
       - name: Build
         run: npm run build
