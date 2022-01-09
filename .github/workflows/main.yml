@@ -1,4 +1,4 @@
-name: Check Prettier Eslint	
+name: Check	
 	
 	on:
 	push:
