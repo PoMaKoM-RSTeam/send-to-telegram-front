@@ -5,11 +5,15 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb-base",
+    "airbnb-typescript"
   ],
   "parserOptions": {
     "ecmaVersion": 2020,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": ["tsconfig.json"]
   },
   "env": {
     "es6": true,
@@ -21,6 +25,9 @@
     "no-console": 0,
     "class-methods-use-this": "off",
     "@typescript-eslint/no-explicit-any": "error",
-    "linebreak-style": ["error", "unix"]
+    "linebreak-style": ["error", "unix"],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "object-curly-newline": ["error", { "multiline": true, "minProperties": 7 }]
   }
 }
