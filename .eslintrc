@@ -25,6 +25,9 @@
     "no-console": 0,
     "class-methods-use-this": "off",
     "@typescript-eslint/no-explicit-any": "error",
-    "linebreak-style": ["error", "unix"]
+    "linebreak-style": ["error", "unix"],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "object-curly-newline": ["error", { "multiline": true, "minProperties": 7 }]
   }
 }
