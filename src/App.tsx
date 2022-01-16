@@ -22,7 +22,9 @@ function App() {
         </div>
       </div>
       <div className="login">
-        <button className='loginBtn effectLogin' type='submit'>Login with telegram</button>
+        <button className="loginBtn effectLogin" type="submit">
+          Login with telegram
+        </button>
       </div>
     </div>
   );
