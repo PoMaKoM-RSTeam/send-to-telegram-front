@@ -8,7 +8,52 @@
   font-size: calc(10px + 2vmin);
   color: white;
 
-  h1 {
-    text-align: center;
+  .header {
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 255px);
+    z-index: 2;
+    div {
+      float: left;
+      color: #fff;
+      font-family: 'Exo', sans-serif;
+      font-size: 35px;
+      font-weight: 200;
+      span {
+        color: #5379fa !important;
+      }
+    }
+  }
+  .login {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    padding: 10px;
+    z-index: 2;
+    .loginBtn {
+      background-color: #5379fa;
+      border-radius: 30px;
+      margin-left: 20px;
+      width: 244px;
+      height: 50px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .effectLogin {
+      display: inline-block;
+      transition-duration: .3s;
+      transition-property: transform;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  ::-moz-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
   }
 }
