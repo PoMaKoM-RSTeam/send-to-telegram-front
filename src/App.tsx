@@ -1,10 +1,21 @@
 import React from 'react';
-import './css-dist/style.min.css';
+import TelegramLoginButton, { TelegramUser } from 'telegram-login-button';
 
 function App() {
   return (
     <div className="wrapper">
-      <h1>Telegram Bot</h1>
+      <div className="header">
+        <div className="logo">
+          <span className="logo-1">RS</span>
+          <span className="logo-2"> -Clone</span>
+          <span className="logo-3">Bot</span>
+        </div>
+      </div>
+      <div className="login">
+        <button className="loginBtn effectLogin" type="submit">
+          <TelegramLoginButton botName="RSCloneBot" dataOnauth={(user: TelegramUser) => console.log(user)} />
+        </button>
+      </div>
     </div>
   );
 }
