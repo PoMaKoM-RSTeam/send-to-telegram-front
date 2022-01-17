@@ -13,13 +13,16 @@
     top: calc(50% - 35px);
     left: calc(50% - 255px);
     z-index: 2;
-    div {
+    .logo {
       float: left;
       color: #fff;
       font-family: 'Exo', sans-serif;
       font-size: 35px;
       font-weight: 200;
-      span {
+      .logo-1 {
+        font-weight: bold;
+      }
+      .logo-3 {
         color: #5379fa !important;
       }
     }
