@@ -6,7 +6,6 @@
     "main": "webpack.base.config.js",
     "scripts": {
         "start": "react-scripts start",
-        "dev": "webpack --config ./webpack.config.js --env mode=dev",
         "build": "react-scripts build",
         "eject": "react-scripts eject",
         "lint": "eslint --ext .ts",
