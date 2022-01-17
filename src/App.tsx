@@ -13,7 +13,7 @@ function App() {
       </div>
       <div className="login">
         <button className="loginBtn effectLogin" type="submit">
-          <TelegramLoginButton botName="RSCloneBot" dataOnauth={(user: TelegramUser) => console.log(user)} />
+          <TelegramLoginButton botName="RSCloneDevBot" dataOnauth={(user: TelegramUser) => console.log(user)} />
         </button>
       </div>
     </div>
