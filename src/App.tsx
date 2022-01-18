@@ -1,6 +1,5 @@
-import './App.scss';
-
-import * as React from 'react';
+import React from 'react';
+import './scss/style.scss';
 import TelegramLoginButton, { TelegramUser } from 'telegram-login-button';
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
       </div>
       <div className="login">
         <button className="loginBtn effectLogin" type="submit">
-          <TelegramLoginButton botName="RSCloneBot" dataOnauth={(user: TelegramUser) => console.log(user)} />
+          <TelegramLoginButton botName="RSCloneDevBot" dataOnauth={(user: TelegramUser) => console.log(user)} />
         </button>
       </div>
     </div>
