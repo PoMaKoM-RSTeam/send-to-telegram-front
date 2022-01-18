@@ -1,4 +1,5 @@
 import React from 'react';
+import './scss/style.scss';
 import TelegramLoginButton, { TelegramUser } from 'telegram-login-button';
 
 function App() {
