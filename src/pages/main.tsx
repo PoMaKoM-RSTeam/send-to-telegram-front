@@ -18,7 +18,7 @@ function Home() {
             <TelegramLoginButton botName="RSCloneDevBot" dataOnauth={(user: TelegramUser) => console.log(user)} />
           </button>
           <button
-            className='loginBtn effectBtn'
+            className="loginBtn effectBtn"
             type="submit"
             onClick={() => {
               navigate('/Login');
