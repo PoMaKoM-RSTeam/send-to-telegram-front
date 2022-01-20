@@ -1,23 +1,22 @@
 import React from 'react';
-import './scss/style.scss';
-import TelegramLoginButton, { TelegramUser } from 'telegram-login-button';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './scss/main.scss';
+import Home from './pages/main';
+import Login from './pages/login';
+import Error from './pages/error';
 
 function App() {
   return (
-    <div className="wrapper">
-      <div className="header">
-        <div className="logo">
-          <span className="logo-1">RS</span>
-          <span className="logo-2"> -Clone</span>
-          <span className="logo-3">Bot</span>
-        </div>
-      </div>
-      <div className="login">
-        <button className="loginBtn effectLogin" type="submit">
-          <TelegramLoginButton botName="RSCloneDevBot" dataOnauth={(user: TelegramUser) => console.log(user)} />
-        </button>
-      </div>
-    </div>
+    <Router>
+      <nav>
+        <Link to="/" />
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </Router>
   );
 }
 
