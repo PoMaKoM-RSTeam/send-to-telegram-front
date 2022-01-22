@@ -13,11 +13,16 @@ body {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    position: relative;
     .header {
       position: absolute;
       top: calc(50% - 35px);
       left: calc(50% - 255px);
       z-index: 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
       .logo {
         float: left;
         color: #fff;
@@ -33,11 +38,14 @@ body {
       }
     }
     .login {
-      position: absolute;
+      // position: absolute;
       top: calc(50% - 50px);
       left: calc(50% - 50px);
       padding: 10px;
       z-index: 2;
+      display: flex;
+      flex-direction: column;
+
       .loginBtn {
         background-color: #5379fa;
         border-radius: 30px;
@@ -46,8 +54,9 @@ body {
         height: 50px;
         color: #fff;
         cursor: pointer;
+        margin-bottom: 30px;
       }
-      .effectLogin {
+      .effectBtn {
         display: inline-block;
         transition-duration: 0.3s;
         transition-property: transform;
