@@ -3,7 +3,7 @@ import './login.scss';
 
 function Login() {
   return (
-    <div className="login">
+    <div className="page-frame">
       <aside className="navigation">
         <div className="logo">RSClon</div>
         <div className="user">user</div>
@@ -18,7 +18,7 @@ function Login() {
           </ul>
         </nav>
       </aside>
-      <section className="info-area">bfd</section>
+      <section className="info-area">консоль</section>
     </div>
   );
 }

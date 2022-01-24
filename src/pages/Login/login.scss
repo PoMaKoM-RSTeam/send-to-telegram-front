@@ -1,4 +1,4 @@
-.login {
+.page-frame {
   display: flex;
   background-color: #e6eaec;
   height: 100vh;
@@ -8,19 +8,25 @@
   width: 20%;
   background-color: #327feb;
   padding: 20px 0;
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .user {
+    min-height: 68px;
+    text-align: center;
+    background-color: #1b70e9;
+    width: 80%;
+    margin: 20px auto;
+  }
 }
-.logo {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-}
-.user {
-  min-height: 68px;
-  text-align: center;
-  background-color: #1b70e9;
-  width: 80%;
-  margin: 20px auto;
-}
+
 .info-area {
   width: 80%;
   padding: 20px 0;
