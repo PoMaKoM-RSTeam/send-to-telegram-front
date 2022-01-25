@@ -1,7 +1,7 @@
 import React from 'react';
 import './PageUser.scss';
 
-function PageUser() {
+export default function PageUser(): JSX.Element {
   return (
     <div className="user">
       <div className="user__counter">0</div>
@@ -15,5 +15,3 @@ function PageUser() {
     </div>
   );
 }
-
-export default PageUser;
