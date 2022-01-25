@@ -1,5 +1,6 @@
 import React from 'react';
 import './login.scss';
+import ConsoleBot from '../../Components/ConsoleBot/ConsoleBot';
 
 function Login() {
   return (
@@ -18,7 +19,9 @@ function Login() {
           </ul>
         </nav>
       </aside>
-      <section className="info-area">консоль</section>
+      <section className="info-area">
+        <ConsoleBot />
+      </section>
     </div>
   );
 }
