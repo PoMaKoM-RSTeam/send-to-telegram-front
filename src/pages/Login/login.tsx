@@ -1,13 +1,14 @@
 import React from 'react';
 import './login.scss';
 import ConsoleBot from '../../Components/ConsoleBot/ConsoleBot';
+import PageUser from '../../Components/PageUser/PageUser';
 
 function Login() {
   return (
     <div className="page-frame">
       <aside className="navigation">
         <div className="logo">RSClon</div>
-        <div className="user">user</div>
+        <PageUser />
         <nav>
           <ul className="navigation__list">
             <li className="navigation__item">Консоль</li>
