@@ -15,8 +15,11 @@ function Moderation() {
       <div className='filter-wrapper'>
         <div className='filter-list'>
           <button className='btn-filter-list' type='button'>Применить фильтр</button>
-          <button className='btn-filter-list' type='button'>Изменить вил столбцов</button>
-          <h3 className='count-item'>Количество пользоватей: 2</h3>
+          <button className='btn-filter-list' type='button'>Изменить вид столбцов</button>
+          <h3 className='count-item'>
+            Количество пользоватей:
+            <span>2</span>
+          </h3>
         </div>
         <input className='search-input' type="text" placeholder="&#x1F50D;&nbsp; Введите текст" />
       </div>

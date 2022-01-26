@@ -35,6 +35,14 @@ ul, li {
             border: none;
             cursor: pointer;
             box-shadow: 3px 2px 2px gray;
+            transition: all .3s;
+            &:hover{
+                background-color: rgb(28, 87, 237);
+                color: #030303;
+            }
+            &:active{
+                box-shadow: none;
+            }
         }
         .btn-setting{
             width: 140px;
@@ -46,6 +54,14 @@ ul, li {
             border: none;
             cursor: pointer;
             box-shadow: 3px 2px 2px gray;
+            transition: all .3s;
+            &:hover{
+                background-color: rgb(255, 205, 5);
+                color: #030303;
+            }
+            &:active{
+                box-shadow: none;
+            }
         }
     }
 }
@@ -65,7 +81,10 @@ ul, li {
             border: none;
             cursor: pointer;
             font-size: 16px;
-            
+            transform: all .5s;
+            &:hover{
+                text-shadow: 1px .5px .5px gray; 
+            }
         }
         .count-item{
             display: inline-block;
@@ -98,6 +117,10 @@ ul, li {
         border: none;
         color: gray;
         cursor: pointer;
+        transform: all .5s;
+            &:hover{
+                text-shadow: 1px .5px .5px gray;
+            }
     }
 }
 .item-list-wrapper{
@@ -151,6 +174,11 @@ ul, li {
         border: 1px solid gray;
         font-size: 24px;
         font-weight: bold;
+        transform: all .5s;
+        &:hover{
+            background-color:rgb(255, 205, 5);
+            color:#fff;
+        }
     }
     
 }
