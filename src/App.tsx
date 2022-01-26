@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './scss/main.scss';
 import Home from './pages/main';
-import Login from './pages/Login/login';
 import Error from './pages/error';
+import Login from './pages/Login/login';
 
 function App() {
   return (

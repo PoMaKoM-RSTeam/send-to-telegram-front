@@ -1,5 +1,6 @@
 import React from 'react';
 import './login.scss';
+import ConsoleBot from '../../Components/ConsoleBot/ConsoleBot';
 import PageUser from '../../Components/PageUser/PageUser';
 
 function Login() {
@@ -7,7 +8,6 @@ function Login() {
     <div className="page-frame">
       <aside className="navigation">
         <div className="logo">RSClon</div>
-
         <PageUser />
         <nav>
           <ul className="navigation__list">
@@ -20,7 +20,9 @@ function Login() {
           </ul>
         </nav>
       </aside>
-      <section className="info-area">консоль</section>
+      <section className="info-area">
+        <ConsoleBot />
+      </section>
     </div>
   );
 }
