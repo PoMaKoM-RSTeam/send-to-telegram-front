@@ -9,7 +9,7 @@ function Moderation() {
         <h2 className='title'>Модерация</h2>
         <div className='setting-wrapper'>
           <button className='btn-add-item' type='button'>+</button>
-          <button className='btn-setting' type='button'>Настройки</button>
+          <button className='btn-setting' type='button'>&#9776;&nbsp; Настройки</button>
         </div>
       </header>
       <div className='filter-wrapper'>
