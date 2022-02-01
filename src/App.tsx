@@ -17,7 +17,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/Login/*" element={<Login />} />
         <Route path="*" element={<Error />} />
         <Route path="/Moderation" element={<Moderation />} />
       </Routes>

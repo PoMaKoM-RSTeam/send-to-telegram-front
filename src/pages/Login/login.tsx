@@ -1,7 +1,9 @@
 import React from 'react';
 import './login.scss';
+import { Route, Routes, NavLink } from 'react-router-dom';
 import ConsoleBot from '../../Components/ConsoleBot/ConsoleBot';
 import PageUser from '../../Components/PageUser/PageUser';
+import SettingsPage from '../SettingsPage/SettingsPage';
 
 function Login() {
   return (
@@ -16,12 +18,18 @@ function Login() {
             <li className="navigation__item">Каналы</li>
             <li className="navigation__item">Аккаунты</li>
             <li className="navigation__item">Биллинг</li>
-            <li className="navigation__item">Настройки</li>
+            <li className="navigation__item">
+              <NavLink to="/settings">Настройки </NavLink>
+            </li>
           </ul>
         </nav>
       </aside>
       <section className="info-area">
-        <ConsoleBot />
+        <Routes>
+          <Route path="/settings" element={<SettingsPage />} />
+
+          <Route path="/Login/*" element={<ConsoleBot />} />
+        </Routes>
       </section>
     </div>
   );
