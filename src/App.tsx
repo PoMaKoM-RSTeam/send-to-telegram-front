@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './scss/main.scss';
+import { ReactNotifications } from 'react-notifications-component';
 import Home from './pages/main';
 import Error from './pages/error';
 import Login from './pages/Login/login';
@@ -8,6 +9,8 @@ import Login from './pages/Login/login';
 function App() {
   return (
     <Router>
+      <ReactNotifications />
+
       <nav>
         <Link to="/" />
       </nav>
