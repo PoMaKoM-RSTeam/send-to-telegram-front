@@ -1,0 +1,20 @@
+.page-frame {
+  display: flex;
+  background-color: #e6eaec;
+  height: 100vh;
+  color: #fff;
+}
+.navigation {
+  width: 20%;
+  background-color: #327feb;
+  padding: 20px 0;
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.info-area {
+  width: 80%;
+}

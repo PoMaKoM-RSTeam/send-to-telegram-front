@@ -1,38 +1,65 @@
 import React from 'react';
-import './login.scss';
-import { Route, Routes, NavLink } from 'react-router-dom';
-import ConsoleBot from '../../Components/ConsoleBot/ConsoleBot';
-import PageUser from '../../Components/PageUser/PageUser';
-import SettingsPage from '../SettingsPage/SettingsPage';
+import './Login.scss';
+import { Store } from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css';
+import 'animate.css';
+import { useNavigate } from 'react-router-dom';
+import TelegramLoginButton, { TelegramUser } from 'telegram-login-button';
 
 function Login() {
-  return (
-    <div className="page-frame">
-      <aside className="navigation">
-        <div className="logo">RSClon</div>
-        <PageUser />
-        <nav>
-          <ul className="navigation__list">
-            <li className="navigation__item">Консоль</li>
-            <li className="navigation__item">Контент-план</li>
-            <li className="navigation__item">Каналы</li>
-            <li className="navigation__item">Аккаунты</li>
-            <li className="navigation__item">Биллинг</li>
-            <li className="navigation__item">
-              <NavLink to="/settings">Настройки </NavLink>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-      <section className="info-area">
-        <Routes>
-          <Route path="/settings" element={<SettingsPage />} />
+  const navigate = useNavigate();
 
-          <Route path="/Login/*" element={<ConsoleBot />} />
-        </Routes>
-      </section>
+  const verificationUser = (user: TelegramUser) => {
+    const validUser = true;
+    console.log(user);
+    if (validUser) {
+      navigate('/');
+    } else {
+      Store.addNotification({
+        title: 'NOT LOGIN',
+        message: 'You must enter the correct username',
+        type: 'warning',
+        insert: 'top',
+        container: 'top-right',
+        animationIn: ['animate__animated', 'animate__fadeIn'],
+        animationOut: ['animate__animated', 'animate__fadeOut'],
+        dismiss: {
+          duration: 5000,
+          onScreen: true,
+        },
+      });
+      console.log('err');
+    }
+  };
+
+  return (
+    <div className="wrapper">
+      <div className="header">
+        <div className="logo">
+          <span className="logo-1">RS</span>
+          <span className="logo-2"> -Clone</span>
+          <span className="logo-3">Bot</span>
+        </div>
+        <div className="login">
+          <TelegramLoginButton
+            botName="RSCloneDevBot"
+            dataOnauth={(user: TelegramUser) => {
+              verificationUser(user);
+              console.log(user);
+            }}
+          />
+          <button
+            className="loginBtn effectBtn"
+            type="submit"
+            onClick={() => {
+              navigate('/');
+            }}
+          >
+            Login
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
-
 export default Login;

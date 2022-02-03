@@ -1,20 +1,77 @@
-.page-frame {
-  display: flex;
-  background-color: #e6eaec;
-  height: 100vh;
-  color: #fff;
-}
-.navigation {
-  width: 20%;
-  background-color: #327feb;
-  padding: 20px 0;
-  .logo {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-  }
-}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
 
-.info-area {
-  width: 80%;
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: white;
+
+    .header {
+      z-index: 2;
+      margin: 0 auto;
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 17%;
+
+      .logo {
+        float: left;
+        color: #fff;
+        font-family: 'Exo', sans-serif;
+        font-size: 35px;
+        font-weight: 200;
+        margin-right: 30px;
+        .logo-1 {
+          font-weight: bold;
+        }
+        .logo-3 {
+          color: #5379fa !important;
+        }
+      }
+    }
+    .login {
+      top: calc(50% - 50px);
+      left: calc(50% - 50px);
+      padding: 10px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+
+      .loginBtn {
+        background-color: #5379fa;
+        border-radius: 30px;
+        margin-left: 20px;
+        width: 244px;
+        height: 50px;
+        color: #fff;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+      .effectBtn {
+        display: inline-block;
+        transition-duration: 0.3s;
+        transition-property: transform;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    ::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    ::-moz-input-placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
 }
