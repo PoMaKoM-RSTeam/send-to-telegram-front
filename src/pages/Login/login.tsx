@@ -30,7 +30,6 @@ function Login(): JSX.Element {
       console.log('err');
     }
   };
-
   return (
     <div className="wrapper">
       <div className="header">
