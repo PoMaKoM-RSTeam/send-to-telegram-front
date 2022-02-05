@@ -2,7 +2,7 @@ import React from 'react';
 import './moderation.scss';
 import plug from '../../resources/img/plug.jpg';
 
-function Moderation() {
+export default function Moderation(): JSX.Element {
   return (
     <div className="page-moderation">
       <header className="header">
@@ -81,5 +81,3 @@ function Moderation() {
     </div>
   );
 }
-
-export default Moderation;

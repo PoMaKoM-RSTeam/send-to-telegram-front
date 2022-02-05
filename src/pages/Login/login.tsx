@@ -6,9 +6,8 @@ import 'animate.css';
 import { useNavigate } from 'react-router-dom';
 import TelegramLoginButton, { TelegramUser } from 'telegram-login-button';
 
-function Login() {
+function Login(): JSX.Element {
   const navigate = useNavigate();
-
   const verificationUser = (user: TelegramUser) => {
     const validUser = true;
     console.log(user);

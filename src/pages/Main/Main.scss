@@ -13,6 +13,21 @@
     font-weight: bold;
     text-align: center;
   }
+  .navigation__list {
+    margin: 0 25px;
+    .navigation__item {
+      padding-bottom: 10px;
+    }
+    .navigation__item a {
+      text-decoration: none;
+    }
+    .navigation__item a:visited {
+      color: #fff;
+    }
+    .navigation__item a:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .info-area {

@@ -1,24 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ReactNotifications } from 'react-notifications-component';
 import Login from './pages/Login/Login';
 import Error from './pages/error';
 import Main from './pages/Main/Main';
-import Moderation from './pages/Moderation/Moderation';
-
-interface IRequireAuth {
-  children: JSX.Element;
-  redirectTo: string;
-}
-
-function RequireAuth({ children, redirectTo }: IRequireAuth) {
-  function getAuth() {
-    const userAutorotation = false;
-    return userAutorotation;
-  }
-  const isAuthenticated = getAuth();
-  return isAuthenticated ? children : <Navigate to={redirectTo} />;
-}
+import RequireAuth from './Components/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -35,7 +21,6 @@ function App() {
           )}
         />
         <Route path="*" element={<Error />} />
-        <Route path="/Moderation" element={<Moderation />} />
       </Routes>
     </Router>
   );

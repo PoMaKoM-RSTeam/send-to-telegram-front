@@ -4,6 +4,7 @@ import { Route, Routes, NavLink } from 'react-router-dom';
 import ConsoleBot from '../../Components/ConsoleBot/ConsoleBot';
 import PageUser from '../../Components/PageUser/PageUser';
 import SettingsPage from '../SettingsPage/SettingsPage';
+import Moderation from '../Moderation/Moderation';
 
 function Main() {
   return (
@@ -13,8 +14,12 @@ function Main() {
         <PageUser />
         <nav>
           <ul className="navigation__list">
-            <li className="navigation__item">Консоль</li>
-            <li className="navigation__item">Контент-план</li>
+            <li className="navigation__item">
+              <NavLink to="/console">Консоль </NavLink>
+            </li>
+            <li className="navigation__item">
+              <NavLink to="/moderation">Модерация </NavLink>
+            </li>
             <li className="navigation__item">Каналы</li>
             <li className="navigation__item">Аккаунты</li>
             <li className="navigation__item">Биллинг</li>
@@ -28,6 +33,7 @@ function Main() {
         <Routes>
           <Route index element={<ConsoleBot />} />
           <Route path="/console" element={<ConsoleBot />} />
+          <Route path="/moderation" element={<Moderation />} />
           <Route path="/settings" element={<SettingsPage />} />
         </Routes>
       </section>
