@@ -1,5 +1,5 @@
 import React from 'react';
-import './moderation.scss';
+import './ModerationPage.scss';
 import plug from '../../resources/img/plug.jpg';
 
 export default function Moderation(): JSX.Element {

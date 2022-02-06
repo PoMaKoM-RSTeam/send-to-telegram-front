@@ -1,15 +1,11 @@
 import React from 'react';
-import './Main.scss';
-import { Route, Routes, NavLink } from 'react-router-dom';
-import ConsoleBot from '../../Components/ConsoleBot/ConsoleBot';
-import PageUser from '../../Components/PageUser/PageUser';
-import SettingsPage from '../SettingsPage/SettingsPage';
-import Moderation from '../Moderation/Moderation';
+import { NavLink } from 'react-router-dom';
+import PageUser from '../PageUser/PageUser';
+import './Navigation.scss'
 
-function Main() {
-  return (
-    <div className="page-frame">
-      <aside className="navigation">
+function Navigation(){
+  return(
+    <aside className="navigation">
         <div className="logo">RSClon</div>
         <PageUser />
         <nav>
@@ -29,16 +25,6 @@ function Main() {
           </ul>
         </nav>
       </aside>
-      <section className="info-area">
-        <Routes>
-          <Route index element={<ConsoleBot />} />
-          <Route path="/console" element={<ConsoleBot />} />
-          <Route path="/moderation" element={<Moderation />} />
-          <Route path="/settings" element={<SettingsPage />} />
-        </Routes>
-      </section>
-    </div>
-  );
+  )
 }
-
-export default Main;
+export default Navigation;

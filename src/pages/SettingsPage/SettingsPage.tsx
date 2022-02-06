@@ -1,5 +1,5 @@
 import React from 'react';
-import './settingsPage.scss';
+import './SettingsPage.scss';
 
 export default function SettingsPage(): JSX.Element {
   return (

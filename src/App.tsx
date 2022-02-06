@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ReactNotifications } from 'react-notifications-component';
-import Login from './pages/Login/Login';
-import Error from './pages/error';
-import Main from './pages/Main/Main';
-import RequireAuth from './Components/RequireAuth/RequireAuth';
+import Login from './Pages/LoginPage/LoginPage';
+import Error from './Pages/ErrorPage';
+import Main from './Views/MainView/MainView';
+import RequireAuth from './Guards/AuthGuard/AuthGuard';
 
 function App() {
   return (
