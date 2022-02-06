@@ -14,11 +14,11 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route
           path="/*"
-          element={(
+          element={
             <RequireAuth redirectTo="/login">
               <Main />
             </RequireAuth>
-          )}
+          }
         />
         <Route path="*" element={<Error />} />
       </Routes>

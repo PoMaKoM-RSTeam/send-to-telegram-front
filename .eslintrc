@@ -8,11 +8,15 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "airbnb-base",
-    "airbnb-typescript"
+    "airbnb-typescript",
+    "prettier"
   ],
+  
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+  },
     "ecmaVersion": 2020,
-    "sourceType": "module",
     "project": ["tsconfig.json"]
   },
   "env": {

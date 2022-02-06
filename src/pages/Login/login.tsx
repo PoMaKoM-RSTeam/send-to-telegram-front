@@ -15,9 +15,9 @@ function Login(): JSX.Element {
       navigate('/');
     } else {
       Store.addNotification({
-        title: 'NOT LOGIN',
-        message: 'You must enter the correct username',
-        type: 'warning',
+        title: 'LOGIN ERROR',
+        message: 'An authorization error has occurred. Try again',
+        type: 'danger',
         insert: 'top',
         container: 'top-right',
         animationIn: ['animate__animated', 'animate__fadeIn'],
