@@ -13,6 +13,8 @@ export default function RequireAuth({ children, redirectTo }: IRequireAuth) {
       return true;
     }
     // TODO: fix? do Notification
+    //
+    //
     // Store.addNotification({
     //   title: 'LOGIN INVALID',
     //   message: 'The login session is not valid. Retry sign in',
@@ -26,6 +28,7 @@ export default function RequireAuth({ children, redirectTo }: IRequireAuth) {
     //     onScreen: true,
     //   },
     // });
+    //
     return false;
   }
   const isAuthenticated = getAuth();
