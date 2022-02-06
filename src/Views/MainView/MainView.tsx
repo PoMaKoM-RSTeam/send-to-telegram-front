@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import ConsoleBot from '../../Components/ConsoleBot/ConsoleBot';
 import SettingsPage from '../../Pages/SettingsPage/SettingsPage';
 import Moderation from '../../Pages/ModerationPage/ModerationPage';
-import Navigation from '../../Components/Navigation/Navifation'
+import Navigation from '../../Components/Navigation/Navigation';
 
 function Main() {
   return (
