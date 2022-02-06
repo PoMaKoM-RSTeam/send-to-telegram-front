@@ -32,6 +32,14 @@
     "linebreak-style": ["error", "unix"],
     "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": "off",
-    "object-curly-newline": ["error", { "multiline": true, "minProperties": 7 }]
+    "object-curly-newline": ["error", { "multiline": true, "minProperties": 7 }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "tsx": "never",
+        "ts": "never"
+      }
+    ]
   }
 }
