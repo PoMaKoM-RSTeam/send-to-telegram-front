@@ -1,0 +1,25 @@
+.navigation {
+  width: 20%;
+  background-color: #327feb;
+  padding: 20px 0;
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .navigation__list {
+    margin: 0 25px;
+    .navigation__item {
+      padding-bottom: 10px;
+    }
+    .navigation__item a {
+      text-decoration: none;
+    }
+    .navigation__item a:visited {
+      color: #fff;
+    }
+    .navigation__item a:hover {
+      text-decoration: underline;
+    }
+  }
+}

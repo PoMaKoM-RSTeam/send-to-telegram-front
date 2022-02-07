@@ -1,0 +1,23 @@
+.settings {
+  margin: 0 20px;
+}
+
+.settings__title {
+  font-size: 20px;
+  color: #333;
+  font-weight: 400;
+  padding: 0 20px;
+}
+.settings__wrapper {
+  color: #333;
+  font-size: 60px;
+}
+
+.settings__item {
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 6%), 0 1px 0 0 rgb(0 0 0 / 2%);
+  margin-bottom: 30px;
+}

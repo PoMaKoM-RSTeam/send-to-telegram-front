@@ -1,25 +1,23 @@
 import React from 'react';
-import '../scss/main.scss';
+import './LoginPage.scss';
 import { Store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 import 'animate.css';
 import { useNavigate } from 'react-router-dom';
 import TelegramLoginButton, { TelegramUser } from 'telegram-login-button';
-import Login from './Login/login';
 
-function Home() {
+function Login(): JSX.Element {
   const navigate = useNavigate();
-
   const verificationUser = (user: TelegramUser) => {
-    const validUser = false;
+    const validUser = true;
     console.log(user);
     if (validUser) {
-      <Login />;
+      navigate('/');
     } else {
       Store.addNotification({
-        title: 'NOT LOGIN',
-        message: 'You must enter the correct username',
-        type: 'warning',
+        title: 'LOGIN ERROR',
+        message: 'An authorization error has occurred. Try again',
+        type: 'danger',
         insert: 'top',
         container: 'top-right',
         animationIn: ['animate__animated', 'animate__fadeIn'],
@@ -32,7 +30,6 @@ function Home() {
       console.log('err');
     }
   };
-
   return (
     <div className="wrapper">
       <div className="header">
@@ -53,7 +50,7 @@ function Home() {
             className="loginBtn effectBtn"
             type="submit"
             onClick={() => {
-              navigate('/Login');
+              navigate('/');
             }}
           >
             Login
@@ -63,4 +60,4 @@ function Home() {
     </div>
   );
 }
-export default Home;
+export default Login;
