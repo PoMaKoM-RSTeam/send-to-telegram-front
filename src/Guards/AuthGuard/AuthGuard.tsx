@@ -8,13 +8,11 @@ interface IRequireAuth {
 
 export default function RequireAuth({ children, redirectTo }: IRequireAuth) {
   function getAuth(): boolean {
-    const userAutorotation = false;
+    const userAutorotation = true;
     if (userAutorotation) {
       return true;
     }
-    // TODO: fix? do Notification
-    //
-    //
+    // TODO: fix. do Notification
     // Store.addNotification({
     //   title: 'LOGIN INVALID',
     //   message: 'The login session is not valid. Retry sign in',

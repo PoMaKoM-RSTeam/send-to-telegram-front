@@ -13,12 +13,12 @@ function Navigation() {
           <li className="navigation__item">
             <NavLink to="/console">Консоль </NavLink>
           </li>
+          <li className="navigation__item">Каналы</li>
+          <li className="navigation__item">Контент-план</li>
+          <li className="navigation__item">Статистика</li>
           <li className="navigation__item">
             <NavLink to="/moderation">Модерация </NavLink>
           </li>
-          <li className="navigation__item">Каналы</li>
-          <li className="navigation__item">Аккаунты</li>
-          <li className="navigation__item">Биллинг</li>
           <li className="navigation__item">
             <NavLink to="/settings">Настройки </NavLink>
           </li>
