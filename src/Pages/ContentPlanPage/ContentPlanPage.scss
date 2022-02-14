@@ -1,11 +1,16 @@
 .content-plan {
-  margin: 0 20px;
+  padding: 0 20px;
+  left: 250px;
+  height: 70px;
+  .content-plan__title {
+    font-family: 'Playfair Display SC';
+    font-size: 20px;
+    color: #5199ff;
+    font-weight: 700;
+    line-height: 70px;
+  }
 }
-.content-plan__title {
-  font-size: 20px;
-  color: #333;
-  font-weight: 400;
-}
+
 .content-plan__wrapper {
   display: flex;
   flex-direction: column;
