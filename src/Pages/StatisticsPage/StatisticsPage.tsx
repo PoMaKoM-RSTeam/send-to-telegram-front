@@ -1,25 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './StatisticsPage.scss';
 import StatisticsButton from '../../Components/UI/StatisticsButton/StatisticsButton';
 
 interface StatisticsButtonsItem {
   name: string;
   id: number;
+  content: string;
 }
 
 export default function StatisticsPage(): JSX.Element {
   const statisticsButtons: StatisticsButtonsItem[] = [
-    { name: 'подписчики', id: 1 },
-    { name: 'посты', id: 2 },
-    { name: 'просмотры', id: 3 },
+    { name: 'подписчики', id: 1, content: 'График подписчики' },
+    { name: 'посты', id: 2, content: 'График посты' },
+    { name: 'просмотры', id: 3, content: 'График просмотры' },
   ];
 
-  const changeSchedule = () => {
-    console.log(Event);
-    // const countForSchedule: Element | null = document.querySelector('.schedule-wrapper');
-    const schedulesCollection: NodeListOf<Element> = document.querySelectorAll('.schedule');
-    // console.log();
-    console.log(schedulesCollection[0]);
+  const [scheduleContent, setScheduleContent] = useState(statisticsButtons[0].content);
+
+  const changeSchedule = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, content: string) => {
+    setScheduleContent(content);
   };
 
   return (
@@ -27,13 +26,16 @@ export default function StatisticsPage(): JSX.Element {
       <h2 className="statistics__title">Статистика</h2>
       <ul className="statistics__links">
         {statisticsButtons.map((button) => (
-          <StatisticsButton key={Math.random()} name={button.name} changeSchedule={changeSchedule} />
+          <StatisticsButton
+            key={button.id}
+            name={button.name}
+            changeScheduleButton={changeSchedule}
+            content={button.content}
+          />
         ))}
       </ul>
       <div className="schedule-wrapper">
-        <div className="schedule schedule-subscriptions">График подписчики</div>
-        <div className="schedule schedule-posts">График посты</div>
-        <div className="schedule schedule-views">График просмотры</div>
+        <div className="schedule">{scheduleContent}</div>
       </div>
     </div>
   );

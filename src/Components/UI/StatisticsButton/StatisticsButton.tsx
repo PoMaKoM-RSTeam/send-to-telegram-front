@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './StatisticsButton.scss';
 
 interface StatisticsButtonsItem {
   name: string;
-  changeSchedule: () => void;
+  changeScheduleButton: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, content: string) => void;
+  content: string;
 }
 
-export default function StatisticsButton({ name, changeSchedule }: StatisticsButtonsItem): JSX.Element {
-  const cls = ['statistics-buttons__button'];
+export default function StatisticsButton({ name, changeScheduleButton, content }: StatisticsButtonsItem): JSX.Element {
+  const [stateBackgroundButton, setStateBackgroundButton] = useState('statistics-buttons__button');
+
   return (
-    <button className={cls.join(' ')} onClick={changeSchedule} type="button">
+    <button
+      onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        changeScheduleButton(e, content);
+        setStateBackgroundButton('statistics-buttons__button active');
+      }}
+      className={stateBackgroundButton}
+      type="button"
+    >
+      {console.log(stateBackgroundButton)}
       {name}
     </button>
   );
