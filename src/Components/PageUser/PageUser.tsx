@@ -9,7 +9,7 @@ export default function PageUser(): JSX.Element {
       <div className="user__wrapper">
         <div className="user__logo">Bot</div>
         <div className="user__info">
-          <div className="user__name">@RSClone-Bot</div>
+          <div className="user__name">@RSClone</div>
           <div className="user__exit">
             <NavLink to="/login" style={{ textDecoration: 'none', color: '#fff' }}>
               Выйти
