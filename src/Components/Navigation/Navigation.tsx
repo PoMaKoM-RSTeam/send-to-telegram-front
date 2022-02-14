@@ -17,7 +17,9 @@ function Navigation() {
           <li className="navigation__item">
             <NavLink to="/content-plan">Контент-план </NavLink>
           </li>
-          <li className="navigation__item">Статистика</li>
+          <li className="navigation__item">
+            <NavLink to="/statistics">Статистика</NavLink>
+          </li>
           <li className="navigation__item">
             <NavLink to="/moderation">Модерация </NavLink>
           </li>
