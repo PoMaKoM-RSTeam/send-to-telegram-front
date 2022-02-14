@@ -6,6 +6,7 @@ import Error from './Pages/ErrorPage';
 import Main from './Views/MainView/MainView';
 import RequireAuth from './Guards/AuthGuard/AuthGuard';
 
+
 function App() {
   return (
     <Router>

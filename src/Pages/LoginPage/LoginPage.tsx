@@ -225,7 +225,7 @@ function Login(): JSX.Element {
                 <img src={Komarov} alt="Bychkou" />
               </div>
               <div className="teamContentName">
-                <p>Roman komarov</p>
+                <p>Roman Komarov</p>
               </div>
               <div className="teamContentGithub">
                 <a href="https://github.com/pomakom">@pomakom</a>
@@ -239,7 +239,7 @@ function Login(): JSX.Element {
                 <img src={Makei} alt="Makei" />
               </div>
               <div className="teamContentName">
-                <p>MAKEI ALIAKSANDR</p>
+                <p>Makei Aliaksandr</p>
               </div>
               <div className="teamContentGithub">
                 <a href="https://github.com/alexxg0152">@alexxg0152</a>
@@ -293,7 +293,7 @@ function Login(): JSX.Element {
                 <img src={Makarevich} alt="Makarevich" />
               </div>
               <div className="teamContentName">
-                <p>Andrew-Makarevich</p>
+                <p>Andrew Makarevich</p>
               </div>
               <div className="teamContentGithub">
                 <a href="https://github.com/andrewmakarevich">@andrewmakarevich</a>
