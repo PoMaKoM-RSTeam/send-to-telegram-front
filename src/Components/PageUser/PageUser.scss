@@ -1,11 +1,12 @@
 .user {
   min-height: 68px;
-  background-color: #1b70e9;
+  background-color: #ff8f0683;
   width: 80%;
   margin: 20px auto;
   display: flex;
   align-items: center;
   position: relative;
+  border-radius: 20px;
   .user__counter {
     position: absolute;
     top: -10px;
@@ -25,7 +26,7 @@
   align-items: center;
   margin: 20px;
   .user__logo {
-    background-color: #cc90e2;
+    background-color: #5199ff;
     border-radius: 50%;
     color: #fff;
     font-weight: 400;

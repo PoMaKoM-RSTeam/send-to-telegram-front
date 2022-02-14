@@ -1,11 +1,16 @@
 .console-bot {
-  margin: 0 20px;
+  padding: 0 20px;
+  left: 250px;
+  height: 70px;
+  .console-bot__title {
+    font-size: 20px;
+    color: #5199ff;
+    font-weight: 700;
+
+    line-height: 70px;
+  }
 }
-.console-bot__title {
-  font-size: 20px;
-  color: #333;
-  font-weight: 400;
-}
+
 .console-bot__wrapper {
   display: flex;
   align-items: center;
