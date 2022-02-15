@@ -15,11 +15,14 @@ export default function StatisticsPage(): JSX.Element {
     { name: 'просмотры', id: 3, content: 'График просмотры' },
   ];
 
-  const [scheduleContent, setScheduleContent] = useState(statisticsButtons[0].content);
+  const [scheduleContent, setScheduleContent] = useState(statisticsButtons[0]);
 
-  const changeSchedule = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, content: string) => {
-    setScheduleContent(content);
+  const changeSchedule = (value: StatisticsButtonsItem) => {
+    console.log(value);
+    setScheduleContent(value);
   };
+
+  const { content, id } = scheduleContent;
 
   return (
     <div className="statistics">
@@ -28,14 +31,14 @@ export default function StatisticsPage(): JSX.Element {
         {statisticsButtons.map((button) => (
           <StatisticsButton
             key={button.id}
-            name={button.name}
             changeScheduleButton={changeSchedule}
-            content={button.content}
+            value={button}
+            isActive={button.id === id}
           />
         ))}
       </ul>
       <div className="schedule-wrapper">
-        <div className="schedule">{scheduleContent}</div>
+        <div className="schedule">{content}</div>
       </div>
     </div>
   );
