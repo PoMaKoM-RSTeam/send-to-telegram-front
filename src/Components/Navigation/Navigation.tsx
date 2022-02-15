@@ -45,7 +45,6 @@ function Navigation() {
           </li>
           <li className="navigation__item">
             <NavLink to="/statistics">Статистика</NavLink>
-
           </li>
           <li className="navigation__item">
             <NavLink to="/moderation">Модерация </NavLink>
