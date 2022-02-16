@@ -1,10 +1,13 @@
 .page-frame {
   display: flex;
-  background-color: #e6eaec;
   height: 100vh;
   color: #fff;
 }
-
+body[data-theme=light]{
+.page-frame{
+   background-color: #e6eaec;
+}
+}
 .info-area {
   width: 80%;
 }

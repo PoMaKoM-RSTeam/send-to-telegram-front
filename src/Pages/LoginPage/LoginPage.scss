@@ -8,9 +8,20 @@ h1 {
 html {
   scroll-behavior: smooth;
 }
+body[data-theme=light] {
+  background-color: #fff;
+  color: black;
+  transition: background-color 1050ms ease-in-out;
+}
+body[data-theme=dark] {
+  background-color: #282c34;
+  color: white;
+  transition: background-color 1050ms ease-in-out;
+}
+
+
 body {
   font-family: 'Roboto', sans-serif;
-  color: #222;
   font-size: 16px;
   line-height: 28px;
   margin: 0;
@@ -45,7 +56,6 @@ header {
         align-items: center;
         .loginNavigationItem {
           a {
-            color: #222;
             padding: 0px 20px;
             height: 100%;
             text-decoration: none;
@@ -75,7 +85,6 @@ main {
     .loginMainContentText {
       width: 70%;
       h2 {
-        color: #222;
         font-size: 38px;
         line-height: 50px;
         font-weight: 700;
@@ -93,7 +102,6 @@ main {
         margin-left: 20px;
         width: 244px;
         height: 50px;
-        color: #fff;
         cursor: pointer;
         margin-bottom: 30px;
       }
@@ -112,14 +120,12 @@ main {
     align-items: center;
     .scopeContentTitle {
       h2 {
-        color: #222;
         font-size: 38px;
         line-height: 50px;
         font-weight: 700;
         text-align: center;
       }
       h4 {
-        color: #505050;
         font-size: 20px;
         line-height: 32px;
         font-weight: 400;
@@ -151,7 +157,6 @@ main {
         display: flex;
         .itemTitleText {
           p {
-            color: #222;
             font-size: 20px;
             font-weight: 700;
           }
@@ -165,7 +170,7 @@ main {
             padding: 5px;
             margin-right: 8px;
             border-radius: 10px;
-            background-color: #ebf1fc;
+            // background-color: #ebf1fc;
 
             img {
               width: 32px;
@@ -176,7 +181,6 @@ main {
       }
       .itemDes {
         max-width: 250px;
-        color: #505050;
       }
     }
     .scopeFuncList {
@@ -215,7 +219,7 @@ main {
       margin-bottom: 56px;
 
       h2 {
-        color: #222;
+        // color: #222;
         font-size: 38px;
         line-height: 50px;
         font-weight: 700;
@@ -259,12 +263,10 @@ main {
           padding-left: 8px;
           border-radius: 10px;
           background-color: #5199ff;
-          color: #fff;
           font-size: 14px;
           line-height: 24px;
           font-weight: 400;
           p {
-            color: #fff;
             font-size: 14px;
             line-height: 24px;
             font-weight: 400;
