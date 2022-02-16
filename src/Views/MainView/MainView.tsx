@@ -6,6 +6,7 @@ import SettingsPage from '../../Pages/SettingsPage/SettingsPage';
 import Moderation from '../../Pages/ModerationPage/ModerationPage';
 import Navigation from '../../Components/Navigation/Navigation';
 import ContentPlanPage from '../../Pages/ContentPlanPage/ContentPlanPage';
+import StatisticsPage from '../../Pages/StatisticsPage/StatisticsPage';
 
 function Main() {
   return (
@@ -18,6 +19,7 @@ function Main() {
           <Route path="/moderation" element={<Moderation />} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/content-plan" element={<ContentPlanPage />} />
+          <Route path="/statistics" element={<StatisticsPage />} />
         </Routes>
       </section>
     </div>
