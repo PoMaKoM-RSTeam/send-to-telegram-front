@@ -16,7 +16,7 @@ function Navigation() {
     if (item !== active) {
       setActive(item);
     } else {
-      setActive(''); 
+      setActive('');
     }
   };
   return (

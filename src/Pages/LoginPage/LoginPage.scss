@@ -8,17 +8,16 @@ h1 {
 html {
   scroll-behavior: smooth;
 }
-body[data-theme=light] {
+body[data-theme='light'] {
   background-color: #fff;
   color: black;
   transition: background-color 1050ms ease-in-out;
 }
-body[data-theme=dark] {
+body[data-theme='dark'] {
   background-color: #282c34;
   color: white;
   transition: background-color 1050ms ease-in-out;
 }
-
 
 body {
   font-family: 'Roboto', sans-serif;
