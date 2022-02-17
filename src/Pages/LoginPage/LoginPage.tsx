@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import './LoginPage.scss';
 import { Store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 import 'animate.css';
+import DayNightToggle from 'react-day-and-night-toggle';
 import { useNavigate } from 'react-router-dom';
 import TelegramLoginButton, { TelegramUser } from 'telegram-login-button';
 import RobotImg from '../../resources/img/robotLogin.png';
@@ -24,7 +26,37 @@ import Github from '../../resources/img/github.svg';
 import RsSchool from '../../resources/img/rs_school_js.svg';
 
 function Login(): JSX.Element {
+  const [isDarkMode, setIsLightMode] = useState(localStorage.getItem('data-theme') === 'dark');
+  useEffect(() => {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      const newColorScheme = e.matches ? 'dark' : 'light';
+      setIsLightMode(newColorScheme === 'light');
+      localStorage.setItem('data-theme', newColorScheme);
+      document.body.setAttribute('data-theme', localStorage.getItem('data-theme') || '{}');
+    });
+
+    if (!isDarkMode) {
+      localStorage.setItem('data-theme', 'light');
+      document.body.setAttribute('data-theme', 'light');
+    } else {
+      localStorage.setItem('data-theme', 'dark');
+      document.body.setAttribute('data-theme', 'dark');
+    }
+  }, [isDarkMode]);
+
+  const handleChangeTheme = () => {
+    setIsLightMode(!isDarkMode);
+    if (!isDarkMode) {
+      localStorage.setItem('data-theme', 'dark');
+      document.body.setAttribute('data-theme', 'dark');
+    } else {
+      localStorage.setItem('data-theme', 'light');
+      document.body.setAttribute('data-theme', 'light');
+    }
+  };
+
   const navigate = useNavigate();
+
   const verificationUser = (user: TelegramUser) => {
     const validUser = true;
     console.log(user);
@@ -70,6 +102,9 @@ function Login(): JSX.Element {
                 <div className="loginNavigationLang">
                   <p className="loginNavigationLangText">EN</p>
                 </div>
+              </li>
+              <li>
+                <DayNightToggle size={30} onChange={() => handleChangeTheme()} checked={isDarkMode} />
               </li>
             </ul>
           </div>
