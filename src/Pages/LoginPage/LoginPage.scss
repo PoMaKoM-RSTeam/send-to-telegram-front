@@ -61,11 +61,19 @@ header {
           }
           .loginNavigationLang {
             padding: 9px 10px 8px;
-            border: 1px solid #ffaf50;
             border-radius: 3px;
             margin-right: 8px;
-            .loginNavigationLangText {
+            .btnLang {
               color: #5199ff;
+              border: none;
+              background: transparent;
+              margin-right: 1%;
+              cursor: pointer;
+              transition: 1s;
+              opacity: 0.8;
+            }
+            .btnLang:hover {
+              color: #ffaf50;
             }
           }
         }

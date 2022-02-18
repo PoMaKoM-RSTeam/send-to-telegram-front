@@ -1,0 +1,74 @@
+{
+  "navigationLanding": {
+    "main": "Main",
+    "service": "Service",
+    "team": "Team"
+  },
+  "headerLanding": {
+    "title": "Delayed Telegram posting is your true friend and helper",
+    "button": "Login"
+  },
+  "bodyLanding": {
+    "title": "Service features",
+    "subtitle": "List of functions with features available exclusively in Telegram",
+    "contentItemPostTitle": "Posting",
+    "contentItemPostSubtitleOne": "Send messages whenever you want.",
+    "contentItemPostSubtitleTwo": "Delayed posting",
+    "contentItemPostSubtitleThree": "Editing sent posts",
+    "contentItemDialogTitle": "Dialogues",
+    "contentItemDialogSubtitleOne": "Communicate on behalf of the bot and see what they write to him",
+    "contentItemDialogSubtitleTwo": "Chatting on Behalf of a Bot",
+    "contentItemStatTitle": "Statistics",
+    "contentItemStatSubtitleOne": "Record new victories every day",
+    "contentItemTeamTitle": "Team",
+    "contentItemTeamName": {
+      "Roma": "Roman Komarov",
+      "Alex": "Aliaksandr Makei",
+      "Artem": "Artsiom Bychkou",
+      "Kate": "Ekaterina Kachan",
+      "Vadim": "Vadzim Maroz",
+      "Andrew": "Andrew Makarevich"
+    }
+  },
+  "personalArea": {
+    "buttonExit": "Exit",
+    "navigationMenuItem": {
+      "console": "Console",
+      "channel": "Channel",
+      "content": "Content plan",
+      "stat": "Statistics",
+      "mode": "Moderation",
+      "set": "Settings"
+    },
+    "contentConsoleDay": {
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "total": "Total",
+      "monthItem": {
+        "dec": "December",
+        "jan": "January"
+      },
+      "dayItem": {
+        "mon": "Monday",
+        "tue": "Tuesday"
+      }
+    },
+    "contentPlan": {
+      "next": "Next",
+      "prev": "Previous",
+      "subscribers": "Subscribers",
+      "posts": "Posts",
+      "view": "Views",
+      "graph": {
+        "sub": "Graph subscribers",
+        "post": "Graph posts",
+        "view": "Graph vies"
+      }
+    },
+    "contentSet": {
+      "lang": "Language settings",
+      "them": "Theme settings"
+    }
+  }
+}

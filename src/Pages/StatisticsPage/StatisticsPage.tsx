@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './StatisticsPage.scss';
 import { VictoryChart, VictoryLine, VictoryVoronoiContainer, VictoryGroup, VictoryScatter } from 'victory';
 import StatisticsButton from '../../Components/UI/StatisticsButton/StatisticsButton';
@@ -10,10 +11,11 @@ interface StatisticsButtonsItem {
 }
 
 export default function StatisticsPage(): JSX.Element {
+  const { t } = useTranslation();
   const statisticsButtons: StatisticsButtonsItem[] = [
-    { name: 'подписчики', id: 1, content: 'График подписчики' },
-    { name: 'посты', id: 2, content: 'График посты' },
-    { name: 'просмотры', id: 3, content: 'График просмотры' },
+    { name: t('personalArea.contentPlan.subscribers'), id: 1, content: t('personalArea.contentPlan.graph.sub') },
+    { name: t('personalArea.contentPlan.posts'), id: 2, content: t('personalArea.contentPlan.graph.post') },
+    { name: t('personalArea.contentPlan.view'), id: 3, content: t('personalArea.contentPlan.graph.view') },
   ];
 
   const dataStatistcs: {
@@ -61,7 +63,7 @@ export default function StatisticsPage(): JSX.Element {
 
   return (
     <div className="statistics">
-      <h2 className="statistics__title">Статистика</h2>
+      <h2 className="statistics__title">{t('personalArea.navigationMenuItem.stat')}</h2>
       <ul className="statistics__links">
         {statisticsButtons.map((button) => (
           <StatisticsButton

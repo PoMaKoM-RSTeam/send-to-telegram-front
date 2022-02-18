@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './ContentPlanPage.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp, faBan, faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -13,6 +14,8 @@ interface IconsSvgItem {
 }
 
 interface ObjContentPlanDayItem {
+  date: string;
+  month: string;
   day: string;
   area: null;
   areaIcon: JSX.Element;
@@ -26,14 +29,19 @@ const iconsSvg: IconsSvgItem = {
 };
 
 export default function ContentPlanPage(): JSX.Element {
+  const { t } = useTranslation();
   const objContentPlanDay: ObjContentPlanDayItem[] = [
     {
-      day: '30 дек. четверг',
+      date: '30',
+      month: t('personalArea.contentConsoleDay.monthItem.dec'),
+      day: t('personalArea.contentConsoleDay.dayItem.mon'),
       area: null,
       areaIcon: iconsSvg.elementIconBan,
     },
     {
-      day: '31 дек. пятница',
+      date: '31',
+      month: t('personalArea.contentConsoleDay.monthItem.dec'),
+      day: t('personalArea.contentConsoleDay.dayItem.tue'),
       area: null,
       areaIcon: iconsSvg.elementIconPlus,
     },
@@ -41,22 +49,29 @@ export default function ContentPlanPage(): JSX.Element {
 
   return (
     <div className="content-plan">
-      <h2 className="content-plan__title">Контент план</h2>
+      <h2 className="content-plan__title">{t('personalArea.navigationMenuItem.content')}</h2>
       <div className="content-plan__wrapper">
         <ButtonContentPlan
           classInfo="content-plan__button_before"
-          title="Предыдущие"
+          title={t('personalArea.contentPlan.prev')}
           buttonIcon={iconsSvg.elementIconDown}
         />
         {objContentPlanDay.map(
           (day): JSX.Element => (
-            <ContentPlanDay key={Math.random()} day={day.day} area={day.area} areaIcon={day.areaIcon} />
+            <ContentPlanDay
+              key={Math.random()}
+              date={day.date}
+              month={day.month}
+              day={day.day}
+              area={day.area}
+              areaIcon={day.areaIcon}
+            />
           )
         )}
 
         <ButtonContentPlan
           classInfo="content-plan__button_after"
-          title="Следующие"
+          title={t('personalArea.contentPlan.next')}
           buttonIcon={iconsSvg.elementIconUp}
         />
       </div>
