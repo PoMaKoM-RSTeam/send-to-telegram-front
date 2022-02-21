@@ -5,6 +5,7 @@ import { Store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 import 'animate.css';
 import DayNightToggle from 'react-day-and-night-toggle';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import TelegramLoginButton, { TelegramUser } from 'telegram-login-button';
 import RobotImg from '../../resources/img/robotLogin.png';
@@ -26,6 +27,12 @@ import Github from '../../resources/img/github.svg';
 import RsSchool from '../../resources/img/rs_school_js.svg';
 
 function Login(): JSX.Element {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+  };
+
   const [isDarkMode, setIsLightMode] = useState(localStorage.getItem('data-theme') === 'dark');
   useEffect(() => {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
@@ -90,21 +97,26 @@ function Login(): JSX.Element {
           <div className="loginNavigationMenu">
             <ul className="loginNavigationList">
               <li className="loginNavigationItem">
-                <a href="#main">Главная</a>
+                <a href="#main">{t('navigationLanding.main')}</a>
               </li>
               <li className="loginNavigationItem">
-                <a href="#service">Сервис</a>
+                <a href="#service">{t('navigationLanding.service')}</a>
               </li>
               <li className="loginNavigationItem">
-                <a href="#team">Команда</a>
-              </li>
-              <li className="loginNavigationItem">
-                <div className="loginNavigationLang">
-                  <p className="loginNavigationLangText">EN</p>
-                </div>
+                <a href="#team">{t('navigationLanding.team')}</a>
               </li>
               <li>
                 <DayNightToggle size={30} onChange={() => handleChangeTheme()} checked={isDarkMode} />
+              </li>
+              <li className="loginNavigationItem">
+                <div className="loginNavigationLang">
+                  <button className="btnLang" type="button" onClick={() => changeLanguage('en')}>
+                    EN
+                  </button>
+                  <button className="btnLang" type="button" onClick={() => changeLanguage('ru')}>
+                    RU
+                  </button>
+                </div>
               </li>
             </ul>
           </div>
@@ -114,7 +126,7 @@ function Login(): JSX.Element {
         <section className="loginMain">
           <div className="loginMainContent">
             <div className="loginMainContentText">
-              <h2>Отложенный постинг Telegram ваш верный друг и помощник</h2>
+              <h2>{t('headerLanding.title')}</h2>
             </div>
             <div className="loginMainContentButton">
               <TelegramLoginButton
@@ -131,7 +143,7 @@ function Login(): JSX.Element {
                   navigate('/');
                 }}
               >
-                Login
+                {t('headerLanding.button')}
               </button>
             </div>
           </div>
@@ -141,8 +153,8 @@ function Login(): JSX.Element {
         </section>
         <section className="scopeContent" id="service">
           <div className="scopeContentTitle">
-            <h2>Возможности сервиса</h2>
-            <h4>Список функций с возможностями доступными исключительно в Telegram</h4>
+            <h2>{t('bodyLanding.title')}</h2>
+            <h4>{t('bodyLanding.subtitle')}</h4>
           </div>
           <div className="scopeContentList">
             <div className="scopeContentItem">
@@ -154,7 +166,7 @@ function Login(): JSX.Element {
               <div className="scopeContentItemText">
                 <div className="itemTitle">
                   <div className="itemTitleText">
-                    <p>Постинг</p>
+                    <p>{t('bodyLanding.contentItemPostTitle')}</p>
                   </div>
                   <div className="itemGroup">
                     <div className="itemGroupImg">
@@ -169,18 +181,18 @@ function Login(): JSX.Element {
                   </div>
                 </div>
                 <div className="itemDes">
-                  <p>Отправляй сообщения когда захочешь.</p>
+                  <p>{t('bodyLanding.contentItemPostSubtitleOne')}</p>
                 </div>
               </div>
             </div>
             <div className="scopeFuncList">
               <div className="scopeFuncName">
                 <img src={TimerIcon} alt="Timer Icon" />
-                <p>Отложенный постинг</p>
+                <p>{t('bodyLanding.contentItemPostSubtitleTwo')}</p>
               </div>
               <div className="scopeFuncName">
                 <img src={WritingIcon} alt="Timer Icon" />
-                <p>Редактирование отправленных постов</p>
+                <p>{t('bodyLanding.contentItemPostSubtitleThree')}</p>
               </div>
             </div>
 
@@ -193,7 +205,7 @@ function Login(): JSX.Element {
               <div className="scopeContentItemText">
                 <div className="itemTitle">
                   <div className="itemTitleText">
-                    <p>Диалоги</p>
+                    <p>{t('bodyLanding.contentItemDialogTitle')}</p>
                   </div>
                   <div className="itemGroup">
                     <div className="itemGroupImg">
@@ -208,14 +220,14 @@ function Login(): JSX.Element {
                   </div>
                 </div>
                 <div className="itemDes">
-                  <p>Общайся от имени бота и смотри что пишут ему.</p>
+                  <p>{t('bodyLanding.contentItemDialogSubtitleOne')}</p>
                 </div>
               </div>
             </div>
             <div className="scopeFuncList">
               <div className="scopeFuncName">
                 <img src={RobotIcon} alt="Robot Icon" />
-                <p>Общение от имени бота</p>
+                <p>{t('bodyLanding.contentItemDialogSubtitleTwo')}</p>
               </div>
             </div>
 
@@ -228,7 +240,7 @@ function Login(): JSX.Element {
               <div className="scopeContentItemText">
                 <div className="itemTitle">
                   <div className="itemTitleText">
-                    <p>Статистика</p>
+                    <p>{t('bodyLanding.contentItemStatTitle')}</p>
                   </div>
                   <div className="itemGroup">
                     <div className="itemGroupImg">
@@ -243,7 +255,7 @@ function Login(): JSX.Element {
                   </div>
                 </div>
                 <div className="itemDes">
-                  <p>Фиксируй новые победы каждый день.</p>
+                  <p>{t('bodyLanding.contentItemStatSubtitleOne')}</p>
                 </div>
               </div>
             </div>
@@ -252,7 +264,7 @@ function Login(): JSX.Element {
 
         <section className="teamContent" id="team">
           <div className="teamContentTitle">
-            <h2>Команда</h2>
+            <h2>{t('bodyLanding.contentItemTeamTitle')}</h2>
           </div>
           <div className="teamContentList">
             <div className="teamContentItem">
@@ -260,7 +272,7 @@ function Login(): JSX.Element {
                 <img src={Komarov} alt="Bychkou" />
               </div>
               <div className="teamContentName">
-                <p>Roman Komarov</p>
+                <p>{t('bodyLanding.contentItemTeamName.Roma')}</p>
               </div>
               <div className="teamContentGithub">
                 <a href="https://github.com/pomakom">@pomakom</a>
@@ -274,7 +286,7 @@ function Login(): JSX.Element {
                 <img src={Makei} alt="Makei" />
               </div>
               <div className="teamContentName">
-                <p>Makei Aliaksandr</p>
+                <p>{t('bodyLanding.contentItemTeamName.Alex')}</p>
               </div>
               <div className="teamContentGithub">
                 <a href="https://github.com/alexxg0152">@alexxg0152</a>
@@ -286,7 +298,7 @@ function Login(): JSX.Element {
                 <img src={Bychkou} alt="Bychkou" />
               </div>
               <div className="teamContentName">
-                <p>Artsiom Bychkou</p>
+                <p>{t('bodyLanding.contentItemTeamName.Artem')}</p>
               </div>
               <div className="teamContentGithub">
                 <a href="https://github.com/archi-minsk">@archi-minsk</a>
@@ -300,7 +312,7 @@ function Login(): JSX.Element {
                 <img src={Kachan} alt="Kachan" />
               </div>
               <div className="teamContentName">
-                <p>Ekaterina Kachan</p>
+                <p>{t('bodyLanding.contentItemTeamName.Kate')}</p>
               </div>
               <div className="teamContentGithub">
                 <a href="https://github.com/KaterinaKachann">@KaterinaKachann</a>
@@ -314,7 +326,7 @@ function Login(): JSX.Element {
                 <img src={Moroz} alt="Moroz" />
               </div>
               <div className="teamContentName">
-                <p>Vadzim Maroz</p>
+                <p>{t('bodyLanding.contentItemTeamName.Vadim')}</p>
               </div>
               <div className="teamContentGithub">
                 <a href="https://github.com/gomunkool">@gomunkool</a>
@@ -328,7 +340,7 @@ function Login(): JSX.Element {
                 <img src={Makarevich} alt="Makarevich" />
               </div>
               <div className="teamContentName">
-                <p>Andrew Makarevich</p>
+                <p>{t('bodyLanding.contentItemTeamName.Andrew')}</p>
               </div>
               <div className="teamContentGithub">
                 <a href="https://github.com/andrewmakarevich">@andrewmakarevich</a>

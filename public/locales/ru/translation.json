@@ -1,0 +1,74 @@
+{
+  "navigationLanding": {
+    "main": "Главная",
+    "service": "Сервис",
+    "team": "Команда"
+  },
+  "headerLanding": {
+    "title": "Отложенный постинг Telegram ваш верный друг и помощник",
+    "button": "Зарегистрироваться"
+  },
+  "bodyLanding": {
+    "title": "Возможности сервиса",
+    "subtitle": "Список функций с возможностями доступными исключительно в Telegram",
+    "contentItemPostTitle": "Постинг",
+    "contentItemPostSubtitleOne": "Отправляй сообщения когда захочешь.",
+    "contentItemPostSubtitleTwo": "Отложенный постинг",
+    "contentItemPostSubtitleThree": "Редактирование отправленных постов",
+    "contentItemDialogTitle": "Диалоги",
+    "contentItemDialogSubtitleOne": "Общайся от имени бота и смотри что пишут ему",
+    "contentItemDialogSubtitleTwo": "Общение от имени бота",
+    "contentItemStatTitle": "Статистика",
+    "contentItemStatSubtitleOne": "Фиксируй новые победы каждый день",
+    "contentItemTeamTitle": "Команда",
+    "contentItemTeamName": {
+      "Roma": "Рома Комаров",
+      "Alex": "Александр Макей",
+      "Artem": "Артем Бычков",
+      "Kate": "Екатерина Качан",
+      "Vadim": "Вадим Мороз",
+      "Andrew": "Андрей Макаревич"
+    }
+  },
+  "personalArea": {
+    "buttonExit": "Выйти",
+    "navigationMenuItem": {
+      "console": "Консоль",
+      "channel": "Каналы",
+      "content": "Контент-план",
+      "stat": "Статистика",
+      "mode": "Модерация",
+      "set": "Настройки"
+    },
+    "contentConsoleDay": {
+      "day": "День",
+      "week": "Неделя",
+      "month": "Месяц",
+      "total": "Всего",
+      "monthItem": {
+        "dec": "Декабрь",
+        "jan": "Январь"
+      },
+      "dayItem": {
+        "mon": "Понедельник",
+        "tue": "Вторник"
+      }
+    },
+    "contentPlan": {
+      "next": "Следующие",
+      "prev": "Предыдущие",
+      "subscribers": "Подписчики",
+      "posts": "Посты",
+      "view": "Просмотры",
+      "graph": {
+        "sub": "График подписчики",
+        "post": "График посты",
+        "view": "График просмотры"
+      }
+    },
+    "contentSet": {
+      "lang": "Настройка языка",
+      "them": "Настройка темы"
+    }
+  }
+}
