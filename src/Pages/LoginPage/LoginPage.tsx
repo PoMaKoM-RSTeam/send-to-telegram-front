@@ -8,6 +8,7 @@ import DayNightToggle from 'react-day-and-night-toggle';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import TelegramLoginButton, { TelegramUser } from 'telegram-login-button';
+import axios from 'axios';
 import RobotImg from '../../resources/img/robotLogin.png';
 import Post from '../../resources/img/post.svg';
 import RobotIcon from '../../resources/img/ai.png';
@@ -64,26 +65,42 @@ function Login(): JSX.Element {
 
   const navigate = useNavigate();
 
-  const verificationUser = (user: TelegramUser) => {
-    const validUser = true;
-    console.log(user);
-    if (validUser) {
-      navigate('/');
-    } else {
-      Store.addNotification({
-        title: 'LOGIN ERROR',
-        message: 'An authorization error has occurred. Try again',
-        type: 'danger',
-        insert: 'top',
-        container: 'top-right',
-        animationIn: ['animate__animated', 'animate__fadeIn'],
-        animationOut: ['animate__animated', 'animate__fadeOut'],
-        dismiss: {
-          duration: 5000,
-          onScreen: true,
-        },
-      });
-      console.log('err');
+  const verificationUser = async (user: TelegramUser) => {
+    localStorage.setItem('user', JSON.stringify(user));
+    const userFromLocalStorage: string | null = localStorage.getItem('user');
+    if (typeof userFromLocalStorage === 'string') {
+      try {
+        const response = await axios.post('https://send-to-telegram-back.herokuapp.com/api/user/auth', user);
+        navigate('/');
+        Store.addNotification({
+          title: 'LOGIN SUCCESS',
+          message: response.data.message,
+          type: 'success',
+          insert: 'top',
+          container: 'top-right',
+          animationIn: ['animate__animated', 'animate__fadeIn'],
+          animationOut: ['animate__animated', 'animate__fadeOut'],
+          dismiss: {
+            duration: 5000,
+            onScreen: true,
+          },
+        });
+      } catch (error) {
+        console.error(error);
+        Store.addNotification({
+          title: 'LOGIN ERROR',
+          message: 'An authorization error has occurred. Try again',
+          type: 'danger',
+          insert: 'top',
+          container: 'top-right',
+          animationIn: ['animate__animated', 'animate__fadeIn'],
+          animationOut: ['animate__animated', 'animate__fadeOut'],
+          dismiss: {
+            duration: 5000,
+            onScreen: true,
+          },
+        });
+      }
     }
   };
   return (
@@ -133,7 +150,6 @@ function Login(): JSX.Element {
                 botName="RSCloneDevBot"
                 dataOnauth={(user: TelegramUser) => {
                   verificationUser(user);
-                  console.log(user);
                 }}
               />
               <button
