@@ -44,12 +44,14 @@ export default function SettingsPage(): JSX.Element {
       <div className="settings__wrapper">
         <div className="settings__item">
           <p>{t('personalArea.contentSet.lang')}</p>
-          <button type="button" onClick={() => changeLanguage('en')}>
-            EN
-          </button>
-          <button type="button" onClick={() => changeLanguage('ru')}>
-            RU
-          </button>
+          <div className="button-change-wrapper">
+            <button className="button-change-language" type="button" onClick={() => changeLanguage('en')}>
+              EN
+            </button>
+            <button className="button-change-language" type="button" onClick={() => changeLanguage('ru')}>
+              RU
+            </button>
+          </div>
         </div>
         <div className="settings__item">
           <p>{t('personalArea.contentSet.them')}</p>
