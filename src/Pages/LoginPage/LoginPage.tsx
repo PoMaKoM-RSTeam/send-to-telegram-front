@@ -152,15 +152,6 @@ function Login(): JSX.Element {
                   verificationUser(user);
                 }}
               />
-              <button
-                className="loginBtn effectBtn"
-                type="submit"
-                onClick={() => {
-                  navigate('/');
-                }}
-              >
-                {t('headerLanding.button')}
-              </button>
             </div>
           </div>
           <div className="loginMainImage">
