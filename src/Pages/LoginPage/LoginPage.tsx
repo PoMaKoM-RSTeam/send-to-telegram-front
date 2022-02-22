@@ -19,7 +19,6 @@ import WritingIcon from '../../resources/img/writing.png';
 import CommentIcon from '../../resources/img/comment.png';
 import StatisticIcon from '../../resources/img/pie-chart.png';
 import Makei from '../../resources/img/MAKEI-ALIAKSANDR.png';
-import Bychkou from '../../resources/img/Artsiom-Bychkou.png';
 import Kachan from '../../resources/img/EkaterinaKachan.png';
 import Moroz from '../../resources/img/Vadzim-Maroz.png';
 import Makarevich from '../../resources/img/Andrew-Makarevich.png';
@@ -62,9 +61,12 @@ function Login(): JSX.Element {
       document.body.setAttribute('data-theme', 'light');
     }
   };
+  
+    // fetch("https://send-to-telegram-back.herokuapp.com/api/channel/memberChannels/addmember")
 
+      
+        
   const navigate = useNavigate();
-
   const verificationUser = async (user: TelegramUser) => {
     localStorage.setItem('user', JSON.stringify(user));
     const userFromLocalStorage: string | null = localStorage.getItem('user');
@@ -299,20 +301,6 @@ function Login(): JSX.Element {
                 <a href="https://github.com/alexxg0152">@alexxg0152</a>
               </div>
               <div className="teamContentPosition">BackEnd Developer</div>
-            </div>
-            <div className="teamContentItem">
-              <div className="teamContentImg">
-                <img src={Bychkou} alt="Bychkou" />
-              </div>
-              <div className="teamContentName">
-                <p>{t('bodyLanding.contentItemTeamName.Artem')}</p>
-              </div>
-              <div className="teamContentGithub">
-                <a href="https://github.com/archi-minsk">@archi-minsk</a>
-              </div>
-              <div className="teamContentPosition">
-                <p>FrontEnd Developer</p>
-              </div>
             </div>
             <div className="teamContentItem">
               <div className="teamContentImg">
