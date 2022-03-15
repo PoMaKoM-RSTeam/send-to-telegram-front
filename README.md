@@ -36,6 +36,22 @@ Web application:
 - Display of statistics. Plotting activity graphs.
 - Analysis and provision of recommendations on the time of posting for better coverage of the target audience.
 
+Technology:
+- ReactJS.
+- HTML/SCSS.
+- Typescript.
+- Hysky.
+- Prettier.
+- Eslint-airbnb.
+- Github Actions.
+
+
+Libraries:
+- i18next - for translate.
+- react-day-and-night-toggle - for day-night theme.
+- react-notifications.
+- victory - for modular charting and data visualization.
+
 
 [Back-End](https://github.com/PoMaKoM-RSTeam/send-to-telegram-back/blob/develop/README.md)
 
@@ -109,8 +125,8 @@ RS Clone is an alternate final stage#2 project in RS.SCHOOL. This is a team miss
 
 Authors 
 * [PoMaKoM  [Team Lead & Mentor]](https://github.com/PoMaKoM)
-* [alexxg0152  [Frontend developer (HTML, CSS, TS, JS)]](https://github.com/alexxg0152)
+* [alexxg0152  [Backend developer  (node.js, js)]](https://github.com/alexxg0152)
+* [andrewmakarevich  [Backend developer (node.js, js)]](https://github.com/andrewmakarevich)
 * [gomunkool  [Frontend developer (HTML, CSS, TS, JS)]](https://github.com/gomunkool)
 * [KaterinaKachann  [Frontend developer (HTML, CSS, TS, JS)]](https://github.com/KaterinaKachann)
-* [andrewmakarevich  [Backend developer (node.js, js)]](https://github.com/andrewmakarevich)
-* [toystix1992  [Backend developer (node.js, js)]](https://github.com/toystix1992)
+
