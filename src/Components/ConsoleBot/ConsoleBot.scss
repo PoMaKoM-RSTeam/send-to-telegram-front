@@ -1,0 +1,18 @@
+.console-bot {
+  padding: 0 20px;
+  left: 250px;
+  height: 70px;
+  .console-bot__title {
+    font-size: 20px;
+    color: #5199ff;
+    font-weight: 700;
+
+    line-height: 70px;
+  }
+}
+
+.console-bot__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

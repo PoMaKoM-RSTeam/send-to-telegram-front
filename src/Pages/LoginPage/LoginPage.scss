@@ -1,0 +1,293 @@
+ul,
+li,
+p,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body[data-theme='light'] {
+  background-color: #fff;
+  color: black;
+  transition: background-color 1050ms ease-in-out;
+}
+body[data-theme='dark'] {
+  background-color: #282c34;
+  color: white;
+  transition: background-color 1050ms ease-in-out;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  margin: 0;
+}
+header {
+  border-bottom: 1px solid #e0e0e0;
+  .loginNavigation {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 65px;
+    align-items: center;
+    .loginNavigationLogo {
+      span {
+        color: #5199ff;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+      }
+    }
+    .loginNavigationLogo span:nth-child(2) {
+      color: #ffaf50;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+    }
+    .loginNavigationMenu {
+      .loginNavigationList {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .loginNavigationItem {
+          a {
+            padding: 0px 20px;
+            height: 100%;
+            text-decoration: none;
+          }
+          .loginNavigationLang {
+            padding: 9px 10px 8px;
+            border-radius: 3px;
+            margin-right: 8px;
+            .btnLang {
+              color: #5199ff;
+              border: none;
+              background: transparent;
+              margin-right: 1%;
+              cursor: pointer;
+              transition: 1s;
+              opacity: 0.8;
+            }
+            .btnLang:hover {
+              color: #ffaf50;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-top: -64px;
+  padding-top: 120px;
+  .loginMain {
+    display: flex;
+    padding: 70px 140px;
+    justify-content: center;
+    .loginMainContentText {
+      width: 70%;
+      h2 {
+        font-size: 38px;
+        line-height: 50px;
+        font-weight: 700;
+      }
+    }
+    .loginMainContentButton {
+      top: calc(50% - 50px);
+      left: calc(50% - 50px);
+      padding: 10px;
+      z-index: 2;
+      .loginBtn {
+        background-image: linear-gradient(45deg, #ffaf50, #fcc579);
+        border-radius: 10px;
+        border: 1px solid #ffaf50;
+        margin-left: 20px;
+        width: 244px;
+        height: 50px;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+    }
+    .loginMainImage {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .scopeContent {
+    display: flex;
+    justify-content: center;
+    padding: 70px 140px;
+    flex-direction: column;
+    align-items: center;
+    .scopeContentTitle {
+      h2 {
+        font-size: 38px;
+        line-height: 50px;
+        font-weight: 700;
+        text-align: center;
+      }
+      h4 {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 400;
+      }
+    }
+    .scopeContentItem {
+      display: flex;
+      margin-bottom: 16px;
+      .scopeContentItemInner {
+        display: flex;
+
+        .scopeContentItemImg {
+          display: flex;
+          justify-content: center;
+          border-radius: 10px;
+          background-color: #ebf1fc;
+          width: 84px;
+          height: 84px;
+          margin-right: 32px;
+          align-items: center;
+          img {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 auto;
+          }
+        }
+      }
+      .itemTitle {
+        display: flex;
+        .itemTitleText {
+          p {
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+        .itemGroup {
+          display: flex;
+          margin-left: 32px;
+          .itemGroupImg {
+            width: 32px;
+            height: 32px;
+            padding: 5px;
+            margin-right: 8px;
+            border-radius: 10px;
+
+            img {
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
+      }
+      .itemDes {
+        max-width: 250px;
+      }
+    }
+    .scopeFuncList {
+      display: flex;
+      align-items: flex-start;
+      align-content: flex-start;
+      margin-bottom: 40px;
+      .scopeFuncName {
+        display: flex;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        padding: 6px 16px 6px 10px;
+        align-items: center;
+        border-radius: 10px;
+        background-color: #ebf1fc;
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
+        p {
+          color: #222;
+          font-size: 16px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  .teamContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 140px;
+    border-bottom: 1px solid #e0e0e0;
+    .teamContentTitle {
+      margin-bottom: 56px;
+
+      h2 {
+        font-size: 38px;
+        line-height: 50px;
+        font-weight: 700;
+      }
+    }
+    .teamContentList {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+      .teamContentItem {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 300px;
+        margin-bottom: 30px;
+        margin-right: 50px;
+        .teamContentImg {
+          img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 16px;
+            border-radius: 100%;
+          }
+        }
+        .teamContentName {
+          p {
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: 700;
+          }
+        }
+        .teamContentGithub {
+          a {
+            color: #5199ff;
+            text-decoration: none;
+          }
+        }
+        .teamContentPosition {
+          padding-right: 8px;
+          padding-left: 8px;
+          border-radius: 10px;
+          background-color: #5199ff;
+          font-size: 14px;
+          line-height: 24px;
+          font-weight: 400;
+          p {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  .source {
+    img {
+      width: 46px;
+      height: 46px;
+    }
+  }
+}

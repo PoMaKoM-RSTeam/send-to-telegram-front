@@ -1,0 +1,15 @@
+.statistics-buttons__button {
+  height: 100%;
+  width: 33.33%;
+  border: none;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+}
+.statistics-buttons__button:hover {
+  background-color: rgb(226, 223, 223);
+}
+
+.statistics-buttons__button.active {
+  background-color: #d1e3ff;
+}
